@@ -190,7 +190,7 @@ Time     PID: 0        CPU        IOs
  13     WAITING                     1
  14     WAITING                     1
  15     WAITING                     1
- 16*       DONE
+ 16*       DONE            1
 ```
 
 As you can see, the program just issues three I/Os. When each I/O is issued,
@@ -202,12 +202,12 @@ to see some overall behaviors:
 
 ```sh
 Stats: Total Time 16
-Stats: CPU Busy 3 (18.75%)
+Stats: CPU Busy 4 (25.00%)
 Stats: IO Busy  12 (75.00%)
 ```
 
 As you can see, the trace took 16 clock ticks to run, but the CPU was only
-busy less than 20% of the time. The IO device, on the other hand, was quite
+busy less than 30% of the time. The IO device, on the other hand, was quite
 busy. In general, we'd like to keep all the devices busy, as that is a better
 use of resources.
 
